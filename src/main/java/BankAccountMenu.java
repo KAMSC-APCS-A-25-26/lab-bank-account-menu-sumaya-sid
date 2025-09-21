@@ -33,26 +33,33 @@ public class BankAccountMenu {
                     System.out.print("Enter amount to add:  ");
                     double amoney = sc.nextDouble();
                     account += amoney;
-                    System.out.println("New balance:  $" + account);
+                    System.out.printf("New balance:  $%.2f\n", account);
                     if (amoney <= 0)
                     {
-                        System.out.println("Error");
+                        System.out.println("Error: Give an amount greater than zero.");
                     }
                     break;
 
                 case 2:
                     System.out.print("Enter amount to withdraw:  ");
                     double wmoney = sc.nextDouble();
-                    account -= wmoney;
-                    System.out.println("New balance:  $" + account);
-                    if (wmoney <= 0 || wmoney > account)
+                    if (wmoney <= 0)
+                    {
+                        System.out.println("Error: Give an amount greater than zero.");
+                    }
+                    else if (wmoney > account)
                     {
                         System.out.println("Insufficient Funds");
+                    }
+                    else
+                    {
+                        account -= wmoney;
+                        System.out.printf("New balance:  $%.2f\n", account);
                     }
                     break;
 
                 case 3:
-                    System.out.print("Current Balance:  $" + account);
+                    System.out.printf("Current Balance:  $%.2f\n", account);
                     break;
 
                 case 4:
