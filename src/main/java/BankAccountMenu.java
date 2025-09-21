@@ -64,6 +64,7 @@ public class BankAccountMenu {
 
                 case 4:
                     System.out.print("Goodbye!");
+                    run = false;
                     break;
             }
         }
