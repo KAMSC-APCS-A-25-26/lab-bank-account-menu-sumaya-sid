@@ -32,11 +32,14 @@ public class BankAccountMenu {
                 case 1:
                     System.out.print("Enter amount to add:  ");
                     double amoney = sc.nextDouble();
-                    account += amoney;
-                    System.out.printf("New balance:  $%.2f\n", account);
                     if (amoney <= 0)
                     {
                         System.out.println("Error: Give an amount greater than zero.");
+                    }
+                    else
+                    {
+                        account += amoney;
+                        System.out.printf("New balance:  $%.2f\n", account);
                     }
                     break;
 
