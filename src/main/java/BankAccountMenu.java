@@ -69,6 +69,10 @@ public class BankAccountMenu {
                     System.out.print("Goodbye!");
                     run = false;
                     break;
+
+                default:
+                    System.out.println("Invalid choice. Enter a number from 1-4.");
+                    break;
             }
         }
     }
